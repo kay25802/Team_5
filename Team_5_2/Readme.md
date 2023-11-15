@@ -1,4 +1,4 @@
-# 2023 어흥올림픽 TEAM 1
+# 2023 어흥올림픽 TEAM 5
 
 <div align="center">
 <img width="329" alt="image" src="https://github.com/2023-AHEUNGTHON/Team_1/assets/94633589/f7f60b7b-6a04-41e8-a38f-8cd619fd6e4a">
