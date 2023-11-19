@@ -1,0 +1,30 @@
+.Footer {
+  width: 100%;
+  height: 198px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #292929;
+  color: #9e9e9e;
+}
+
+.FT-CopyRight {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.developers {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9em;
+}
+
+.dv {
+  display: flex;
+}
+
+.dv p {
+  margin-left: 5px;
+}
