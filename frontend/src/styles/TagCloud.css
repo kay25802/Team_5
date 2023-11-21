@@ -1,0 +1,109 @@
+.tagcloud-page {
+  background-color: #f5f6f9;
+}
+
+.cloud-title {
+  text-align: center;
+  color: #3b3d4b;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-top: 50px;
+}
+
+.cloud-text {
+  text-align: center;
+  color: #7b7b7b;
+  font-size: 1.1em;
+
+  margin-top: 15px;
+  padding-bottom: 50px;
+}
+
+.tag-cloud {
+  width: 80vw;
+  height: 60vh;
+  background-color: white;
+
+  border: 2px solid #297fff;
+  border-left: none;
+  border-right: none;
+
+  padding: 10vh 10vw;
+}
+
+.empty-cloud {
+  width: 100vw;
+  height: 15vh;
+  background-color: #f5f6f9;
+}
+
+/* 모달창 */
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 35px;
+
+  width: 30vw;
+  height: 40vh;
+  box-shadow: 0 0px 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+.close {
+  color: #297fff;
+  float: right;
+  font-size: 2.5em;
+  cursor: pointer;
+  margin-top: -15px;
+}
+
+.close:hover {
+  color: black;
+}
+
+.modal-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 10%;
+}
+
+.modal-text p {
+  /* font-weight: bold; */
+  font-size: 1.5em;
+  color: white;
+
+  background-color: #297fff;
+  border-radius: 27.5px;
+
+  padding: 10px 25px;
+}
+
+.modal-heart {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 10%;
+}
+
+.modal-heart-text {
+  display: flex;
+  justify-content: center;
+
+  font-size: 1.2em;
+  color: #3b3d4b;
+
+  margin-top: 10%;
+}
