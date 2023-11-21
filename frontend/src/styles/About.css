@@ -1,0 +1,158 @@
+.about {
+  background-image: url("../img/about_back.png");
+  background-size: cover;
+  background-position: top;
+}
+
+.about-1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5vw;
+}
+
+.about-1-logo img {
+  margin-top: -100px;
+  height: 80vh;
+}
+
+.about-1-text {
+  margin-left: 10vw;
+  margin-top: 20vh;
+
+  color: white;
+}
+
+.about-1-text-b {
+  font-size: 2.4em;
+  font-weight: bold;
+}
+
+.about-1-text-b b {
+  font-size: 1.5em;
+}
+
+.about-1-text-p {
+  font-size: 1.1em;
+  margin-top: 8vh;
+}
+
+.about-2 {
+  /* margin: 0 15vw; */
+  margin-top: 17vh;
+
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+}
+
+.about-2-text {
+  text-align: center;
+  margin-left: 7vw;
+}
+
+.about-2-title,
+.about-3-title,
+.about-4-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 10vh;
+}
+
+.about-2-title p,
+.about-3-title p,
+.about-4-title p {
+  padding: 15px 25px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #297fff;
+
+  border: solid 2px #297fff;
+  border-radius: 30px;
+}
+
+.about-2-content {
+  color: #3b3d4b;
+  font-size: 1.1em;
+
+  margin-top: 8vh;
+}
+
+.about-2-content p {
+  margin: 15px 0;
+}
+
+.about-3 {
+  background-color: white;
+
+  position: relative;
+  z-index: 50;
+  margin-top: -23vh;
+}
+
+.about-3-title p,
+.about-4-title p {
+  margin-top: 10vh;
+}
+
+.about-3-content,
+.about-4-content {
+  text-align: center;
+  font-size: 1.1em;
+  color: #3b3d4b;
+  margin: 5vh 0;
+}
+
+.about-3-content p,
+.about-4-content p {
+  margin-bottom: 10px;
+}
+
+.about-3-img {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.about-4 {
+  background-color: #f5f6f9;
+
+  position: relative;
+  z-index: 50;
+  margin-top: -28vh;
+}
+
+.about-4-teamBox {
+  display: flex;
+  justify-content: center;
+}
+
+.about-4-teamNames {
+  display: flex;
+  width: 55vw;
+  justify-content: space-around;
+
+  border: solid 2px #297fff;
+  border-radius: 20px;
+}
+
+.about-4-teamNames {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #297fff;
+  padding: 25px 0;
+}
+
+.about-4-img img {
+  width: 100vw;
+  margin-top: 10vh;
+}
+
+.about-footer {
+  margin-top: -15px;
+}
+
+.Footer {
+  position: relative;
+  z-index: 100;
+}
