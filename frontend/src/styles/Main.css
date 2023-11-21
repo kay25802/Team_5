@@ -32,6 +32,8 @@
   font-weight: bold;
   color: #f5f6f9;
   padding: 20px 0;
+
+  margin-top: 15vh;
 }
 
 .main-btn-btn {
@@ -66,4 +68,28 @@
 
 .main-page::-webkit-scrollbar {
   display: none; /* 크롬, 사파리, 오페라 */
+}
+
+.teaming-names {
+  overflow-x: hidden;
+  width: 200vw;
+  margin-left: -50vw;
+}
+
+.teaming-name {
+  display: flex;
+  justify-content: center;
+}
+
+.teaming-name p {
+  color: white;
+  font-size: 1.6em;
+  font-weight: bold;
+
+  padding: 30px 80px;
+  border: solid 2px white;
+  border-radius: 60px;
+  background-color: rgb(255, 255, 255, 0.2);
+
+  margin: 10px 20px;
 }
