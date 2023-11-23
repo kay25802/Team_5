@@ -1,0 +1,23 @@
+.loading-page {
+  min-height: calc(100vh - 9vh - 20px);
+  background-color: #f5f6f9;
+  text-align: center;
+}
+
+.load-text {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #3b3d4b;
+
+  padding-top: 20vh;
+}
+
+.load-text b {
+  color: #297fff;
+}
+
+.load-img {
+  margin-top: 8vh;
+}
