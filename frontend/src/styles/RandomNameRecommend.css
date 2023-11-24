@@ -1,0 +1,85 @@
+.random-name-page {
+  background-color: #f5f6f9;
+  min-height: calc(100vh - 9vh - 20px);
+  text-align: center;
+}
+
+.random-name-page p {
+  color: #3b3d4b;
+  /* font-weight: bold; */
+  /* margin-bottom: 50px; */
+  /* padding-top: 50px; */
+  text-align: center;
+}
+
+.random-name-page-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-top: 7vh;
+}
+
+.recommendation-block-box {
+  display: flex;
+  justify-content: center;
+}
+
+.recommendation-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 1.5px solid #297fff;
+  border-radius: 15px;
+  margin-top: 7vh;
+  /* width: 60vw; */
+  padding: 20px 2vw;
+  gap: 3vw;
+}
+
+.recommended-name {
+  /* padding: 10px; */
+  /* margin: 5px; */
+  display: flex;
+  justify-content: center;
+  color: #297fff;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* max-width: 550px; */
+  margin-top: 10vh;
+}
+
+.more-names-button,
+.get-recommendation-again-button {
+  padding: 15px 0;
+  background-color: #297fff;
+  border: none;
+  border-radius: 55px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-family: "Pretendard-Regular";
+  width: 20vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.more-names-button p,
+.get-recommendation-again-button p {
+  /* font-weight: bold; */
+  color: white;
+  font-size: 1.2em;
+}
+
+.more-names-button {
+  background-color: #c2c5d7;
+  margin-right: 3vw;
+}

@@ -1,11 +1,11 @@
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import Animation from "../components/Animation";
 import "../styles/Loading.css";
 
 function Loading() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <div className="loading-page">
         <div className="load-text">
           <b>티밍</b>

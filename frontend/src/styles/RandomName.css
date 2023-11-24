@@ -3,6 +3,10 @@
   background-color: #f5f6f9;
 }
 
+.random-pg.hidden {
+  display: none;
+}
+
 .random-name-content {
   display: flex;
   flex-direction: column;
@@ -44,6 +48,12 @@
   height: 7vh;
   font-size: 1.1em;
   /* font-weight: bold; */
+}
+
+.category-box.active {
+  background-color: #297fff;
+  color: white;
+  box-shadow: 0 0 15px #297fff;
 }
 
 .random-recommend-btn {
