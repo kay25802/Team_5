@@ -1,0 +1,115 @@
+.makename-content {
+  background-color: #f5f6f9;
+  min-height: calc(100vh - 9vh - 20px);
+}
+
+.makename-text {
+  text-align: center;
+  color: #3b3d4b;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-top: 15vh;
+}
+
+.blue {
+  color: #297fff;
+  font-weight: bold;
+}
+
+.makename-content p {
+  display: inline;
+  white-space: nowrap;
+}
+
+.input-container-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  width: 55vw;
+  padding: 1vw 1vw;
+  box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.3);
+}
+
+.input-container-text {
+  /* border: 1px solid #ccc; */
+  border-radius: 20px;
+  margin-right: 10px;
+  width: 48vw;
+  height: 8vh;
+
+  font-family: "Pretendard-Regular";
+  font-size: 1.4em;
+  border: none;
+  outline: none;
+}
+
+.input-container-btn {
+  /* 버튼 스타일*/
+  padding: 8px 16px;
+  background-color: #7fadf2;
+  color: white;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  width: 6vw;
+  height: 8vh;
+  transition: background-color 0.3s ease;
+  font-family: "Pretendard-Regular";
+  font-size: 2em;
+}
+
+.input-container-btn:hover {
+  background-color: #297fff; /* 마우스 호버 시 배경색 변경 */
+}
+
+.output-keyword {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 45px;
+}
+
+.rounded-box {
+  border-radius: 50px;
+  background-color: none;
+  padding: 15px 40px;
+  border: 1px solid #297fff;
+}
+
+.keyword {
+  text-align: center;
+  color: #297fff;
+}
+
+.make-next-btn {
+  margin-top: 10vh;
+  width: 20vw;
+  background-color: #7fadf2;
+  color: white;
+  text-align: center;
+  font-size: large;
+  padding: 20px 0;
+  border: none;
+  border-radius: 56px;
+  cursor: pointer;
+  font-family: "Pretendard-Regular";
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.make-next-btn:hover {
+  background-color: #297fff;
+}

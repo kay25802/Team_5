@@ -22,22 +22,24 @@ const RandomName = () => {
   return (
     <div className="random-name">
       <Header />
-      <p>선택한 카테고리에 따라 랜덤한 팀명을 추천해드립니다.</p>
-      <div className="categories">
-        <button className="category-box" onClick={() => handleCategorySelect("귀여운 팀명")}>
-          귀여운 팀명
-        </button>
-        <button className="category-box" onClick={() => handleCategorySelect("프로젝트 팀명")}>
-          프로젝트 팀명
-        </button>
-        <button className="category-box" onClick={() => handleCategorySelect("대학 과제 팀명")}>
-          대학 과제 팀명
-        </button>
-        <button className="category-box" onClick={() => handleCategorySelect("인기 많은 팀명")}>
-          인기 많은 팀명
-        </button>
+      <div className="random-name-content">
+        <p>선택한 카테고리에 따라 랜덤한 팀명을 추천해드립니다.</p>
+        <div className="categories">
+          <button className="category-box" onClick={() => handleCategorySelect("귀여운 팀명")}>
+            귀여운 팀명
+          </button>
+          <button className="category-box" onClick={() => handleCategorySelect("프로젝트 팀명")}>
+            프로젝트 팀명
+          </button>
+          <button className="category-box" onClick={() => handleCategorySelect("대학 과제 팀명")}>
+            대학 과제 팀명
+          </button>
+          <button className="category-box" onClick={() => handleCategorySelect("인기 많은 팀명")}>
+            인기 많은 팀명
+          </button>
+        </div>
+        <button onClick={handleNextStep}>다음으로</button>
       </div>
-      <button onClick={handleNextStep}>다음으로</button>
     </div>
   );
 };
