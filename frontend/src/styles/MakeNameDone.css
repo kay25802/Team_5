@@ -41,22 +41,29 @@
   margin-top: 10vh;
 }
 
-.makedone-btn,
-.makedone-word-btn {
+/* .makedone-btn,
+.makedone-word-btn */
+
+.buttons-makedone a {
   /* 버튼들의 스타일 지정*/
   padding: 20px;
   background-color: #297fff;
-  color: white;
-  border: none;
   border-radius: 55px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-right: 20px;
   margin-left: 20px;
-  font-family: "Pretendard-Regular";
   width: 25vw;
-  font-weight: bold;
+}
+
+.makedone-btn,
+.makedone-word-btn {
+  color: white;
+  border: none;
+  font-family: "Pretendard-Regular";
   font-size: 1.2em;
+  font-weight: bold;
+  background-color: #297fff;
 }
 
 .makedone-btn {

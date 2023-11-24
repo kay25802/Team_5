@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import "../styles/RandomNameRecommend.css";
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const RandomNameRecommend = ({ selectedCategory }) => {
   const [recommendedNames, setRecommendedNames] = useState([]);
@@ -42,10 +43,12 @@ const RandomNameRecommend = ({ selectedCategory }) => {
           </div>
         </div>
         <div className="button-container">
-          <button className="more-names-button">
-            <p>워드클라우드에서</p>
-            <p>더 많은 팀명보기</p>
-          </button>
+          <Link to="/tagcloud">
+            <button className="more-names-button">
+              <p>워드클라우드에서</p>
+              <p>더 많은 팀명보기</p>
+            </button>
+          </Link>
           <button className="get-recommendation-again-button">
             <p>프로젝트 팀명으로</p>
             <p>다시 추천받기</p>
