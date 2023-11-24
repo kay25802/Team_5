@@ -45,7 +45,7 @@
 .makedone-word-btn {
   /* 버튼들의 스타일 지정*/
   padding: 20px;
-  background-color: #7fadf2;
+  background-color: #297fff;
   color: white;
   border: none;
   border-radius: 55px;
@@ -61,13 +61,4 @@
 
 .makedone-btn {
   background-color: #c2c5d7;
-}
-
-.makedone-btn:hover,
-.makedone-word-btn:hover {
-  background-color: #297fff;
-}
-
-.makedone-btn:hover {
-  background-color: #7b7b7b;
 }

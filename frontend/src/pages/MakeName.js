@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import MakeNameRecommend from "./MakeNameRecommend";
+import Loading from "./Loading";
 import "../styles/MakeName.css";
 
 const MakeName = ({ onNextStep }) => {
   const [keywords, setKeywords] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const [showRecommendation, setShowRecommendation] = useState(false);
 
   const handleInputChange = (e) => {
@@ -19,18 +21,35 @@ const MakeName = ({ onNextStep }) => {
     }
   };
 
+  // const handleNextStep = () => {
+  //   setShowRecommendation(true);
+  // };
+
   const handleNextStep = () => {
-    setShowRecommendation(true);
+    setIsLoading(true); // 로딩 시작
+    // 4초 후에 다음 페이지로 이동
+    setTimeout(() => {
+      setShowRecommendation(true);
+    }, 4000);
   };
 
   const handleReplay = () => {
     setShowRecommendation(false);
   };
 
+  useEffect(() => {
+    if (isLoading) {
+      // 로딩이 끝나면 다음으로 버튼을 눌러준 것과 동일한 효과를 주기 위해
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 4000);
+    }
+  }, [isLoading]);
+
   return (
     <div className="makename">
       <Header />
-      <div className="makename-content">
+      <div className={`makename-content ${isLoading ? "hidden" : ""}`}>
         {showRecommendation ? (
           <MakeNameRecommend recommendedWords={["건강하조", "오비건이조", "오우웰빙", "환경지킴이", "예쁘게봐조"]} onReplay={handleReplay} onNextStep={onNextStep} />
         ) : (
@@ -60,6 +79,7 @@ const MakeName = ({ onNextStep }) => {
           </div>
         )}
       </div>
+      {isLoading && <Loading />}
     </div>
   );
 };
