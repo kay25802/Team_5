@@ -17,7 +17,7 @@ function TagCloud() {
       setLikedWords(JSON.parse(storedLikedWords));
     }
 
-    // 초기 전체 좋아요 수 설정 (예시로 56으로 설정)
+    // 초기 전체 좋아요 수 설정
     setLikesCount({});
 
     // Sample data for demonstration

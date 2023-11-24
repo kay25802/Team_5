@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logoImage from "../img/Teaming_logo.png";
 import "../styles/MakeNameDone.css";
 
@@ -15,12 +16,12 @@ const MakeNameDone = ({ selectedWord, onMainPage, onViewWordCloud }) => {
         <img src={logoImage} alt="Logo" />
       </div>
       <div className="buttons-makedone">
-        <button className="makedone-btn" onClick={onMainPage}>
-          메인페이지로 이동
-        </button>
-        <button className="makedone-word-btn" onClick={onViewWordCloud}>
-          워드클라우드 보러 가기
-        </button>
+        <Link to="/" style={{ backgroundColor: "#c2c5d7" }}>
+          <button className="makedone-btn">메인페이지로 이동</button>
+        </Link>
+        <Link to="/tagcloud">
+          <button className="makedone-word-btn">워드클라우드 보러 가기</button>
+        </Link>
       </div>
     </div>
   );

@@ -51,17 +51,7 @@ const MakeNameRecommend = () => {
           </div>
         </div>
       ) : (
-        <MakeNameDone
-          selectedWord={selectedWord}
-          onMainPage={() => {
-            // '메인페이지로 이동' 버튼 클릭 시 동작
-            // 로직 구현
-          }}
-          onViewWordCloud={() => {
-            // '워드클라우드 보러가기' 버튼 클릭 시 동작
-            // 로직 구현
-          }}
-        />
+        <MakeNameDone selectedWord={selectedWord} />
       )}
     </div>
   );
