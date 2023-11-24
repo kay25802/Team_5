@@ -1,9 +1,14 @@
-.random-name-content {
+.random-pg {
+  min-height: calc(100vh - 9vh - 20px);
   background-color: #f5f6f9;
+}
+
+.random-name-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding-top: 7vh;
 }
 
 .random-name-content p {
@@ -11,7 +16,7 @@
   color: #3b3d4b;
   font-size: 1.2em;
   font-weight: bold;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   display: flex;
   justify-content: center;
 }
@@ -21,32 +26,43 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 5vh;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .category-box {
   padding: 8px 16px;
-  background-color: white;
+  background-color: #f5f6f9;
   color: #297fff;
   border: 1px solid #297fff;
-  border-radius: 20px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: "Pretendard-Regular";
+  width: 20vw;
+  height: 7vh;
+  font-size: 1.1em;
+  /* font-weight: bold; */
 }
 
-.button {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  max-width: 550px;
-  padding: 10px 20px;
-  background-color: #279dec;
+.random-recommend-btn {
+  padding: 20px;
+  background-color: #7fadf2;
   color: white;
   border: none;
   border-radius: 55px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-family: "Pretendard-Regular";
+  width: 25vw;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 5vh;
 }
 
-.button:hover {
+.random-recommend-btn:hover {
   background-color: #297fff;
 }

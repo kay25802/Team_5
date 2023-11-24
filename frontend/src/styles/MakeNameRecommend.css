@@ -7,7 +7,7 @@
   color: #3b3d4b;
   font-size: 1.2em;
   font-weight: bold;
-  padding-top: 50px;
+  /* padding-top: 50px; */
 }
 
 .MakeNameRecommend {
@@ -25,32 +25,50 @@
 
 .recommendation {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 7vh;
+}
+
+.recommendation-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.recommendation-title p {
+  margin-top: 10px;
 }
 
 .recommended-words {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  gap: 5px;
-  max-width: 368px;
-  width: 100%;
+  gap: 20px;
+  /* max-width: 368px; */
+  /* width: 30vw; */
   justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
 }
 
 .word {
   /* 버튼의 스타일 지정*/
   padding: 8px 16px;
-  background-color: white;
+  background-color: #f5f6f9;
   color: #297fff;
   border: 1px solid #297fff;
-  border-radius: 25px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: "Pretendard-Regular";
+  width: 20vw;
+  height: 7vh;
+  font-size: 1.1em;
+  /* font-weight: bold; */
 }
 
 .word.active {
   background-color: #297fff;
   color: white;
+  box-shadow: 0 0 15px #297fff;
 }
 
 .buttons-recommend {
@@ -58,12 +76,13 @@
   justify-content: space-between;
   width: 100%;
   max-width: 550px; /* 버튼들의 최대 너비 */
+  margin-top: 5vh;
 }
 
 .make-re-btn,
 .make-recommend-btn {
   /* 버튼들의 스타일 지정*/
-  padding: 10px 20px;
+  padding: 20px;
   background-color: #7fadf2;
   color: white;
   border: none;
@@ -72,6 +91,10 @@
   transition: background-color 0.3s ease;
   margin-right: 20px;
   margin-left: 20px;
+  font-family: "Pretendard-Regular";
+  width: 25vw;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 .make-re-btn {

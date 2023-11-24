@@ -24,11 +24,10 @@ const MakeNameRecommend = () => {
       {!showMakeNameDone ? (
         <div className="make-name-recommend">
           <div className="recommendation">
-            <p>
-              이번에는 이런 이름을 추천해드릴게요!
-              <br />
-              마음에 드는 이름이 있다면 선택해주세요.
-            </p>
+            <div className="recommendation-title">
+              <p>이번에는 이런 이름을 추천해드릴게요!</p>
+              <p>마음에 드는 이름이 있다면 선택해주세요.</p>
+            </div>
             <div className="recommended-words">
               {recommendedWords.map((word, index) => (
                 <button
