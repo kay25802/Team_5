@@ -27,10 +27,10 @@ const MakeName = ({ onNextStep }) => {
 
   const handleNextStep = () => {
     setIsLoading(true); // 로딩 시작
-    // 4초 후에 다음 페이지로 이동
+    // 15초 후에 다음 페이지로 이동
     setTimeout(() => {
       setShowRecommendation(true);
-    }, 4000);
+    }, 15000);
   };
 
   const handleReplay = () => {
@@ -42,7 +42,7 @@ const MakeName = ({ onNextStep }) => {
       // 로딩이 끝나면 다음으로 버튼을 눌러준 것과 동일한 효과를 주기 위해
       setTimeout(() => {
         setIsLoading(false);
-      }, 4000);
+      }, 15000);
     }
   }, [isLoading]);
 
