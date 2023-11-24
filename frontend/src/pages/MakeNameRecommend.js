@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "../styles/MakeNameRecommend.css";
 import MakeNameDone from "./MakeNameDone";
 
-const App = () => {
-  const [selectedWord, setSelectedWord] = useState('');
+const MakeNameRecommend = () => {
+  const [selectedWord, setSelectedWord] = useState("");
   const [showMakeNameDone, setShowMakeNameDone] = useState(false);
-  const recommendedWords = ['건강하조', '오비건이조', '오우웰빙', '환경지킴이', '예쁘게봐조'];
+  const recommendedWords = ["건강하조", "오비건이조", "오우웰빙", "환경지킴이", "예쁘게봐조"];
 
   const handleReplay = () => {
-    setSelectedWord('');
+    setSelectedWord("");
   };
 
   const handleNextStep = () => {
@@ -16,15 +16,19 @@ const App = () => {
   };
 
   const handleWordSelect = (word) => {
-    setSelectedWord(word === selectedWord ? '' : word); // 클릭된 단어와 현재 선택된 단어를 비교하여 상태 변경
+    setSelectedWord(word === selectedWord ? "" : word); // 클릭된 단어와 현재 선택된 단어를 비교하여 상태 변경
   };
 
   return (
-    <div className="App">
+    <div className="MakeNameRecommend">
       {!showMakeNameDone ? (
         <div className="make-name-recommend">
           <div className="recommendation">
-            <p>이번에는 이런 이름을 추천해드릴게요!<br />마음에 드는 이름이 있다면 선택해주세요.</p>
+            <p>
+              이번에는 이런 이름을 추천해드릴게요!
+              <br />
+              마음에 드는 이름이 있다면 선택해주세요.
+            </p>
             <div className="recommended-words">
               {recommendedWords.map((word, index) => (
                 <button
@@ -37,10 +41,14 @@ const App = () => {
               ))}
             </div>
           </div>
-          
-          <div className="buttons">
-            <button onClick={handleReplay}>다시 추천받기</button>
-            <button onClick={handleNextStep}>다음으로</button>
+
+          <div className="buttons-recommend">
+            <button className="make-re-btn" onClick={handleReplay}>
+              다시 추천받기
+            </button>
+            <button className="make-recommend-btn" onClick={handleNextStep}>
+              다음으로
+            </button>
           </div>
         </div>
       ) : (
@@ -60,4 +68,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default MakeNameRecommend;

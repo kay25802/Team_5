@@ -1,0 +1,88 @@
+.make-name-recommend {
+  background-color: #f5f6f9;
+}
+
+.MakeNameRecommend p {
+  text-align: center;
+  color: #3b3d4b;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-top: 50px;
+}
+
+.MakeNameRecommend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.make-name-recommend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* 전체 너비로 확장 */
+}
+
+.recommendation {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.recommended-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  max-width: 368px;
+  width: 100%;
+  justify-content: center;
+}
+
+.word {
+  /* 버튼의 스타일 지정*/
+  padding: 8px 16px;
+  background-color: white;
+  color: #297fff;
+  border: 1px solid #297fff;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.word.active {
+  background-color: #297fff;
+  color: white;
+}
+
+.buttons-recommend {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 550px; /* 버튼들의 최대 너비 */
+}
+
+.make-re-btn,
+.make-recommend-btn {
+  /* 버튼들의 스타일 지정*/
+  padding: 10px 20px;
+  background-color: #7fadf2;
+  color: white;
+  border: none;
+  border-radius: 55px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.make-re-btn {
+  background-color: #c2c5d7;
+}
+
+.make-re-btn:hover,
+.make-recommend-btn:hover {
+  background-color: #297fff;
+}
+
+.make-re-btn:hover {
+  background-color: #7b7b7b;
+}
