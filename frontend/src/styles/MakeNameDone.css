@@ -9,13 +9,22 @@
 .done-text {
   text-align: center;
   color: #3b3d4b;
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
   font-weight: bold;
-  padding-top: 50px;
+  /* padding-top: 50px; */
+  margin-top: 7vh;
+}
+.done-text-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.done-text-title p {
+  margin-top: 10px;
 }
 
 .make-logo {
-  margin-top: 30px;
+  margin-top: 5vh;
 }
 
 .make-logo img {
@@ -24,17 +33,19 @@
   height: 300px;
 }
 
-.buttons {
+.buttons-makedone {
   display: flex;
   justify-content: space-between;
   width: 100%;
   max-width: 550px; /* 버튼들의 최대 너비 */
+  margin-top: 10vh;
 }
 
-.buttons button {
+.makedone-btn,
+.makedone-word-btn {
   /* 버튼들의 스타일 지정*/
-  padding: 10px 20px;
-  background-color: #279dec;
+  padding: 20px;
+  background-color: #7fadf2;
   color: white;
   border: none;
   border-radius: 55px;
@@ -42,8 +53,21 @@
   transition: background-color 0.3s ease;
   margin-right: 20px;
   margin-left: 20px;
+  font-family: "Pretendard-Regular";
+  width: 25vw;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
-.buttons button:hover {
+.makedone-btn {
+  background-color: #c2c5d7;
+}
+
+.makedone-btn:hover,
+.makedone-word-btn:hover {
   background-color: #297fff;
+}
+
+.makedone-btn:hover {
+  background-color: #7b7b7b;
 }
