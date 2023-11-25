@@ -17,7 +17,7 @@ function TagCloud() {
   useEffect(() => {
     const fetchDataAndDrawChart = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/wordcloud/");
+        const response = await axios.get("http://ec2-52-78-82-241.ap-northeast-2.compute.amazonaws.com:8000/api/wordcloud/");
         const data = response.data;
         setWordData(data);
 
@@ -46,7 +46,7 @@ function TagCloud() {
 
         chart.listen("pointClick", async (e) => {
           const word = e.point.get("x");
-          const likesResponse = await axios.get(`http://localhost:8000/api/wordcloud/${word}`);
+          const likesResponse = await axios.get(`http://ec2-52-78-82-241.ap-northeast-2.compute.amazonaws.com:8000/api/wordcloud/${word}`);
           const likesData = likesResponse.data;
 
           setWord(word);
@@ -93,7 +93,7 @@ function TagCloud() {
       setLikesCount(newLikesCount);
 
       // PATCH 요청을 실제로 서버에 전송
-      const response = await axios.patch(`http://localhost:8000/api/wordcloud/${word}`);
+      const response = await axios.patch(`http://ec2-52-78-82-241.ap-northeast-2.compute.amazonaws.com:8000/api/wordcloud/${word}`);
 
       if (response.status === 200) {
         console.log("좋아요가 성공적으로 적용되었습니다.");
