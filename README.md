@@ -77,11 +77,11 @@
 
 ---
 ## 화면 구성 📺
-| 메인 페이지  |  oo 페이지   |
+| Main  |  Make Name   |
 | :-------------------------------------------: | :------------: |
-| 사진 | 사진 |  
-| oo 페이지   |  oo 페이지   |  
-| 사진 | 사진 |
+| <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/315de42e-87be-4c71-ae12-01067f3820aa"> | <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/eff39399-edd0-4469-aba2-2512b1a3c455"> |  
+| Random   |  About   |  
+| <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/d681b46e-e681-4c08-ac6e-257718d0c661"> | <img width="160px" src="(https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/5e2dc8dd-e31e-4eaa-bf9d-768ea564970e"> |
 
 ---
 ## 핵심 기능 📦
