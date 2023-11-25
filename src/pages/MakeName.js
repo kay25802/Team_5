@@ -29,7 +29,7 @@ const MakeName = ({ onNextStep }) => {
     try {
       console.log("Request Payload:", { keywords });
 
-      const response = await axios.post("http://ec2-52-78-82-241.ap-northeast-2.compute.amazonaws.com:8000/api/teamnames/ai/", { keywords });
+      const response = await axios.post("https://teaming5.shop/api/teamnames/ai/", { keywords });
 
       if (response.status !== 200) {
         throw new Error(`Failed to fetch AI team name recommendations. Status: ${response.status}`);
