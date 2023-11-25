@@ -27,7 +27,7 @@
 
 |      김서윤       |          김아영         |                                                                                           
 | :------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: |
-|   <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/5902702f-8bae-4039-9309-ea7973f9e7d5" > |             <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/e9fefa06-c214-459d-99fc-6abc89285b64" >    |
+|   <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/5902702f-8bae-4039-9309-ea7973f9e7d5" > |             <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/6f305b5b-e1b4-4860-9b26-135e78e0afa4" >    |
 |   [@may_020503](https://www.instagram.com/may_020503/)   |    [@lily__a0](https://www.instagram.com/lily__a0/)  |
 | Duksung.W.Univ | Myongji.Univ |
 
