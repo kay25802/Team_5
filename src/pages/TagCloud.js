@@ -38,7 +38,7 @@ function TagCloud() {
 
         chart.listen("pointClick", async (e) => {
           const word = e.point.get("x");
-          const likesResponse = await axios.get(`http://localhost:8000/api/wordcloud/${word}/`);
+          const likesResponse = await axios.get(`http://localhost:8000/api/wordcloud/${word}`);
           const likesData = likesResponse.data;
 
           setWord(word);
@@ -67,7 +67,7 @@ function TagCloud() {
         return;
       }
 
-      const response = await axios.patch(`http://localhost:8000/api/wordcloud/${word}/`);
+      const response = await axios.patch(`http://localhost:8000/api/wordcloud/${word}`);
 
       if (response.status === 200) {
         const newLikesCount = { ...likesCount, [word]: (likesCount[word] || 0) + 1 };

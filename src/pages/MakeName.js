@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import MakeNameRecommend from "./MakeNameRecommend";
 import Loading from "./Loading";
+import axios from "axios";
 import "../styles/MakeName.css";
 
 const MakeName = ({ onNextStep }) => {
   const [keywords, setKeywords] = useState([]);
+  const [recommendedWords, setRecommendedWords] = useState([]); // 새로운 상태 추가
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showRecommendation, setShowRecommendation] = useState(false);
@@ -21,16 +23,29 @@ const MakeName = ({ onNextStep }) => {
     }
   };
 
-  // const handleNextStep = () => {
-  //   setShowRecommendation(true);
-  // };
+  const handleNextStep = async () => {
+    setIsLoading(true);
 
-  const handleNextStep = () => {
-    setIsLoading(true); // 로딩 시작
-    // 15초 후에 다음 페이지로 이동
-    setTimeout(() => {
-      setShowRecommendation(true);
-    }, 15000);
+    try {
+      console.log("Request Payload:", { keywords });
+
+      const response = await axios.post("http://localhost:8000/api/teamnames/ai/", { keywords });
+
+      if (response.status !== 200) {
+        throw new Error(`Failed to fetch AI team name recommendations. Status: ${response.status}`);
+      }
+
+      const recommendations = response.data.teamnames;
+      setRecommendedWords(recommendations); // 새로운 상태 업데이트
+
+      setTimeout(() => {
+        setShowRecommendation(true);
+        // You can use the recommendations data here
+      }, 15000);
+    } catch (error) {
+      console.error("Error fetching AI team name recommendations:", error);
+      setIsLoading(false);
+    }
   };
 
   const handleReplay = () => {
@@ -51,7 +66,7 @@ const MakeName = ({ onNextStep }) => {
       <Header />
       <div className={`makename-content ${isLoading ? "hidden" : ""}`}>
         {showRecommendation ? (
-          <MakeNameRecommend recommendedWords={["건강하조", "오비건이조", "오우웰빙", "환경지킴이", "예쁘게봐조"]} onReplay={handleReplay} onNextStep={onNextStep} />
+          <MakeNameRecommend recommendedWords={recommendedWords} onReplay={handleReplay} onNextStep={onNextStep} />
         ) : (
           <div className="makename-text">
             <p>

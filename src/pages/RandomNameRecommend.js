@@ -47,6 +47,13 @@ const RandomNameRecommend = ({ selectedCategory }) => {
               </div>
             ))}
           </div>
+          {/* <div className="recommendation-block">
+            {recommendedNames.map((name, index) => (
+              <div key={index} className="recommended-name">
+                {name}
+              </div>
+            ))}
+          </div> */}
         </div>
         <div className="button-container">
           <Link to="/tagcloud">
