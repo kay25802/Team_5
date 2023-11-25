@@ -1,6 +1,6 @@
 # 2023 어흥올림픽 TEAM 5
 
-<div align="center">
+<div align="left">
 <img width="400" alt="image" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/71ff70cc-c0e7-406e-b1ce-73585542aa0a">
 
 </div>
@@ -36,8 +36,8 @@
 
 |      박나현      |          박수영         |          유예지         |          음상훈         |                                                                                                                   
 | :------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: |:---------------------------------------------------------------------------------------------------------------------------------------------------: |:---------------------------------------------------------------------------------------------------------------------------------------------------: |
-|   <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/c1f23cd7-bd93-4469-9933-62664bdd6dc8" > |             <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_1/assets/94633589/f7f60b7b-6a04-41e8-a38f-8cd619fd6e4a" >    |             <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_1/assets/94633589/f7f60b7b-6a04-41e8-a38f-8cd619fd6e4a" >    |             <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_1/assets/94633589/f7f60b7b-6a04-41e8-a38f-8cd619fd6e4a" >    |
-|   [@na__hyun123](https://www.instagram.com/na__hyun123/)   |    [@na__hyun123](https://www.instagram.com/na__hyun123/)  |    [@na__hyun123](https://www.instagram.com/na__hyun123/)  |    [@na__hyun123](https://www.instagram.com/na__hyun123/)  |
+|   <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/c1f23cd7-bd93-4469-9933-62664bdd6dc8" > |             <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_1/assets/94633589/f7f60b7b-6a04-41e8-a38f-8cd619fd6e4a" >    |             <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/920c13d8-69e9-4612-b1eb-387c7a42f1dd" >    |             <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_1/assets/94633589/f7f60b7b-6a04-41e8-a38f-8cd619fd6e4a" >    |
+|   [@na__hyun123](https://www.instagram.com/na__hyun123/)   |    [@na__hyun123](https://www.instagram.com/na__hyun123/)  |    [@maintn_16](https://www.instagram.com/maintn_16/)  |    [@na__hyun123](https://www.instagram.com/na__hyun123/)  |
 | Sungkyul.Univ | Soongsil.Univ | Soongsil.Univ | Hanyang.Univ(ERICA) |
 
 
@@ -54,7 +54,7 @@
 
 ---
 
-## Stacks 🐈 (여러분들이 사용하신 스택을 적어주세요!)
+## Stacks 🐈
 
 ### Environment
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=Visual%20Studio%20Code&logoColor=white)
