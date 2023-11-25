@@ -1,7 +1,7 @@
 # 2023 어흥올림픽 TEAM 5
 
 <div align="center">
-<img width="329" alt="image" src="https://github.com/2023-AHEUNGTHON/Team_5/blob/main/src/img/Teaming.png">
+<img width="400" alt="image" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/71ff70cc-c0e7-406e-b1ce-73585542aa0a">
 
 </div>
 
@@ -45,7 +45,7 @@
 
 **팀 이름을 지어줘! 티밍** <br/>
 "AI가 추천해주는 팀 이름. 더 이상 팀 이름 짓는데 시간 쓰지 말자!"
-티밍은 팀의 특징을 키워드로 받아 팀 이름을 제안해주는 혁신적인 서비스입니다.<br/>
+> 티밍은 팀의 특징을 키워드로 받아 팀 이름을 제안해주는 혁신적인 서비스입니다. <br/>
 
 **Our Goal**
 1. 팀프로젝트를 하는 데에 있어서 소중한 시간을 아낄 수 있도록 도와주는 것
@@ -68,8 +68,8 @@
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
 ### Design
-![Figma](https://img.shields.io/badge/Figma-%23F24E1E?logo=Figma&logoColor=white)
-![Illustrator](https://img.shields.io/badge/adobeillustrator-%23FF9A00?logo=adobeillustrator&logoColor=white)
+![Figma](https://img.shields.io/badge/figma-%23F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+![Illustrator](https://img.shields.io/badge/adobeillustrator-%23FF9A00?style=for-the-badge&logo=adobeillustrator&logoColor=white)
 
 
 ### Communication
