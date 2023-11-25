@@ -10,7 +10,7 @@ const RandomNameRecommend = ({ selectedCategory }) => {
   // 랜덤 추천 단어를 가져오는 함수
   const fetchRecommendedNames = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/recommend/?count=5`);
+      const response = await axios.get(`http://ec2-52-78-82-241.ap-northeast-2.compute.amazonaws.com:8000/api/recommend/?count=5`);
 
       const recommendedNamesFromServer = response.data;
 
