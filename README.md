@@ -28,7 +28,7 @@
 |      김서윤       |          김아영         |                                                                                           
 | :------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: |
 |   <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/5902702f-8bae-4039-9309-ea7973f9e7d5" > |             <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/e9fefa06-c214-459d-99fc-6abc89285b64" >    |
-|   [@2023-AHEUNGTHON](https://github.com/2023-AHEUNGTHON)   |    [@2023-AHEUNGTHON](https://github.com/2023-AHEUNGTHON)  |
+|   [@may_020503](https://www.instagram.com/may_020503/)   |    [@lily__a0](https://www.instagram.com/lily__a0/)  |
 | Duksung.W.Univ | Myongji.Univ |
 
 **Back-End-Developer**
@@ -36,8 +36,8 @@
 
 |      박나현      |          박수영         |          유예지         |          음상훈         |                                                                                                                   
 | :------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: |:---------------------------------------------------------------------------------------------------------------------------------------------------: |:---------------------------------------------------------------------------------------------------------------------------------------------------: |
-|   <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_1/assets/94633589/f7f60b7b-6a04-41e8-a38f-8cd619fd6e4a" > |             <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_1/assets/94633589/f7f60b7b-6a04-41e8-a38f-8cd619fd6e4a" >    |             <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_1/assets/94633589/f7f60b7b-6a04-41e8-a38f-8cd619fd6e4a" >    |             <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_1/assets/94633589/f7f60b7b-6a04-41e8-a38f-8cd619fd6e4a" >    |
-|   [@2023-AHEUNGTHON](https://github.com/2023-AHEUNGTHON)   |    [@2023-AHEUNGTHON](https://github.com/2023-AHEUNGTHON)  |    [@2023-AHEUNGTHON](https://github.com/2023-AHEUNGTHON)  |    [@2023-AHEUNGTHON](https://github.com/2023-AHEUNGTHON)  |
+|   <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/c1f23cd7-bd93-4469-9933-62664bdd6dc8" > |             <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_1/assets/94633589/f7f60b7b-6a04-41e8-a38f-8cd619fd6e4a" >    |             <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_1/assets/94633589/f7f60b7b-6a04-41e8-a38f-8cd619fd6e4a" >    |             <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_1/assets/94633589/f7f60b7b-6a04-41e8-a38f-8cd619fd6e4a" >    |
+|   [@na__hyun123](https://www.instagram.com/na__hyun123/)   |    [@na__hyun123](https://www.instagram.com/na__hyun123/)  |    [@na__hyun123](https://www.instagram.com/na__hyun123/)  |    [@na__hyun123](https://www.instagram.com/na__hyun123/)  |
 | Sungkyul.Univ | Soongsil.Univ | Soongsil.Univ | Hanyang.Univ(ERICA) |
 
 
