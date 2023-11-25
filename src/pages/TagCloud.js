@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Header from "../components/Header";
 import "../styles/TagCloud.css";
 import anychart from "anychart";
@@ -7,87 +8,77 @@ import heartNone from "../img/heart_none.png";
 import heartFill from "../img/heart_fill.png";
 
 function TagCloud() {
-  const [selectedWord, setSelectedWord] = useState(null);
-  const [likedWords, setLikedWords] = useState({});
+  const [word, setWord] = useState(null);
+  const [wordData, setWordData] = useState([]);
   const [likesCount, setLikesCount] = useState({});
 
   useEffect(() => {
-    const storedLikedWords = localStorage.getItem("likedWords");
-    if (storedLikedWords) {
-      setLikedWords(JSON.parse(storedLikedWords));
-    }
+    const fetchDataAndDrawChart = async () => {
+      try {
+        const response = await axios.get("http://localhost:8000/api/wordcloud/");
+        const data = response.data;
+        setWordData(data);
 
-    // 초기 전체 좋아요 수 설정
-    setLikesCount({});
+        const chartData = data.map((item) => ({
+          x: item.word,
+          value: item.likes || 0, // 만약 likes가 undefined이면 0으로 설정
+        }));
 
-    // Sample data for demonstration
-    const data = [
-      { x: "블랙핑크", value: 7 },
-      { x: "우리가우승하조", value: 5 },
-      { x: "배고파배고파", value: 5 },
-      { x: "24시간이모자라", value: 5 },
-      { x: "교양있는사람들", value: 4 },
-      { x: "휴학하고싶다", value: 4 },
-      { x: "에스파", value: 3 },
-      { x: "점메추", value: 3 },
-      { x: "12345", value: 3 },
-      { x: "어쩌구저쩌구", value: 1 },
-      { x: "56789", value: 3 },
-      { x: "5조", value: 1 },
-      { x: "학생회모임", value: 1 },
-      // Add more data as needed
-    ];
+        // 확인을 위해 chartData를 출력
+        console.log("ChartData:", chartData);
 
-    // Create a word cloud chart
-    const chart = anychart.tagCloud(data);
+        // Dispose existing chart, if any
+        if (window.wordCloudChart) {
+          window.wordCloudChart.dispose();
+        }
 
-    chart.normal().fontFamily("Pretendard-Regular");
+        const chart = anychart.tagCloud(chartData);
+        chart.container("tag-cloud");
+        chart.angles([0, 90]);
 
-    // Set the container where the chart will be rendered
-    chart.container("tag-cloud");
+        chart.listen("pointClick", async (e) => {
+          const word = e.point.get("x");
+          const likesResponse = await axios.get(`http://localhost:8000/api/wordcloud/${word}`);
+          const likesData = likesResponse.data;
 
-    // Draw the chart
-    chart.draw();
-    chart.angles([0, 90]);
+          setWord(word);
+          setLikesCount({ [word]: likesData.likes || 0 }); // 만약 likes가 undefined이면 0으로 설정
+        });
 
-    // Event listener for word click
-    chart.listen("pointClick", (e) => {
-      // Set the selected word when a point is clicked
-      setSelectedWord(e.point.get("x"));
-    });
+        // Draw the chart
+        chart.draw();
 
-    // Clean up chart on component unmount
-    return () => {
-      chart.dispose();
+        // Store chart instance in window object
+        window.wordCloudChart = chart;
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     };
+
+    fetchDataAndDrawChart();
   }, []);
 
-  const closeModal = () => {
-    setSelectedWord(null);
-  };
+  const toggleHeart = async () => {
+    try {
+      console.log("Before toggle - likesCount:", likesCount);
 
-  const toggleHeart = () => {
-    // Copy the current likedWords object and likesCount object
-    const newLikedWords = { ...likedWords };
-    const newLikesCount = { ...likesCount };
+      if (!word) {
+        console.error("No selected word.");
+        return;
+      }
 
-    // Check if the selectedWord is already in likedWords
-    if (selectedWord in newLikedWords) {
-      // If selectedWord is already in likedWords, remove it
-      delete newLikedWords[selectedWord];
-      // Decrease the overall likes count for the selectedWord
-      newLikesCount[selectedWord] -= 1;
-    } else {
-      // If selectedWord is not in likedWords, add it
-      newLikedWords[selectedWord] = 1;
-      // Increase the overall likes count for the selectedWord
-      newLikesCount[selectedWord] = (newLikesCount[selectedWord] || 0) + 1;
+      const response = await axios.patch(`http://localhost:8000/api/wordcloud/${word}`);
+
+      if (response.status === 200) {
+        const newLikesCount = { ...likesCount, [word]: (likesCount[word] || 0) + 1 };
+        setLikesCount(newLikesCount);
+        console.log("After toggle - likesCount:", newLikesCount);
+      } else {
+        console.error("Failed to toggle heart:", response.status, response.statusText);
+      }
+    } catch (error) {
+      console.error("Error toggling heart:", error);
     }
-
-    // Update the state and save to localStorage
-    setLikedWords(newLikedWords);
-    setLikesCount(newLikesCount);
-    localStorage.setItem("likedWords", JSON.stringify(newLikedWords));
   };
 
   return (
@@ -104,22 +95,21 @@ function TagCloud() {
       </div>
       <div className="empty-cloud"></div>
 
-      {/* Modal */}
-      {selectedWord && (
+      {word && (
         <div className="modal">
           <div className="modal-content">
-            <span className="close" onClick={closeModal}>
+            <span className="close" onClick={() => setWord(null)}>
               &times;
             </span>
             <div className="modal-text">
-              <p>{selectedWord}</p>
+              <p>{word}</p>
             </div>
             <div className="modal-heart" onClick={toggleHeart}>
-              <img src={selectedWord in likedWords ? heartFill : heartNone} alt="하트" />
+              <img src={word in likesCount ? heartFill : heartNone} alt="하트" />
             </div>
             <div className="modal-heart-text">
               <p>현재 좋아요 수 - </p>
-              <p style={{ marginLeft: 5 }}>{likesCount[selectedWord] || 0}</p>
+              <p style={{ marginLeft: 5 }}>{likesCount[word] || 0}</p>
               <p>개</p>
             </div>
           </div>

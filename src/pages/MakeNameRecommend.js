@@ -1,25 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "../styles/MakeNameRecommend.css";
 import MakeNameDone from "./MakeNameDone";
 
-const MakeNameRecommend = () => {
+const MakeNameRecommend = ({ recommendedWords, onReplay, onNextStep }) => {
   const [selectedWord, setSelectedWord] = useState("");
   const [showMakeNameDone, setShowMakeNameDone] = useState(false);
-  const recommendedWords = ["건강하조", "오비건이조", "오우웰빙", "환경지킴이", "예쁘게봐조"];
 
   const handleReplay = () => {
     setSelectedWord("");
     window.location.reload();
+    // onReplay(); // 부모 컴포넌트의 onReplay 함수 호출
   };
 
   const handleNextStep = () => {
     setShowMakeNameDone(true);
+    // onNextStep(); // 부모 컴포넌트의 onNextStep 함수 호출
   };
 
   const handleWordSelect = (word) => {
-    setSelectedWord(word === selectedWord ? "" : word); // 클릭된 단어와 현재 선택된 단어를 비교하여 상태 변경
+    setSelectedWord(word === selectedWord ? "" : word);
   };
-
   return (
     <div className="MakeNameRecommend">
       {!showMakeNameDone ? (
@@ -31,11 +32,7 @@ const MakeNameRecommend = () => {
             </div>
             <div className="recommended-words">
               {recommendedWords.map((word, index) => (
-                <button
-                  key={index}
-                  className={selectedWord === word ? "word active" : "word"} // 선택된 단어인 경우 active 클래스 적용
-                  onClick={() => handleWordSelect(word)} // 단어 클릭 시 이벤트 핸들러 추가
-                >
+                <button key={index} className={selectedWord === word ? "word active" : "word"} onClick={() => handleWordSelect(word)}>
                   {word}
                 </button>
               ))}

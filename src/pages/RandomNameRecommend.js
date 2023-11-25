@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import "../styles/RandomNameRecommend.css";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const RandomNameRecommend = ({ selectedCategory }) => {
   const [recommendedNames, setRecommendedNames] = useState([]);
@@ -9,20 +10,20 @@ const RandomNameRecommend = ({ selectedCategory }) => {
   // 랜덤 추천 단어를 가져오는 함수
   const fetchRecommendedNames = async () => {
     try {
-      // API 호출
-      // 우선 더미데이터 사용하여 구현 예시
-      const dummyRecommendedNames = ["만능이조", "비정상회담", "팀명없음", "예선통과시켜조", "레드벨벳"];
+      const response = await axios.get(`http://localhost:8000/api/recommend/?count=5`);
 
-      // 무작위로 5개의 추천 단어 선택
-      const randomNames = Array.from({ length: 5 }, () => dummyRecommendedNames[Math.floor(Math.random() * dummyRecommendedNames.length)]);
+      const recommendedNamesFromServer = response.data;
 
-      setRecommendedNames(randomNames);
+      console.log("Recommended Names from Server:", recommendedNamesFromServer);
+
+      setRecommendedNames(recommendedNamesFromServer);
     } catch (error) {
       console.error("Error fetching recommended names:", error);
     }
   };
 
   useEffect(() => {
+    console.log("Recommended Names Before Rendering:", recommendedNames);
     fetchRecommendedNames();
   }, [selectedCategory]);
 
@@ -35,12 +36,24 @@ const RandomNameRecommend = ({ selectedCategory }) => {
         </div>
         <div className="recommendation-block-box">
           <div className="recommendation-block">
+            {recommendedNames.map((item, index) => (
+              <div key={index} className="recommended-name">
+                {/* Assuming each object has properties name1, name2, name3, name4, name5 */}
+                <p>{item.name1}</p>
+                <p>{item.name2}</p>
+                <p>{item.name3}</p>
+                <p>{item.name4}</p>
+                <p>{item.name5}</p>
+              </div>
+            ))}
+          </div>
+          {/* <div className="recommendation-block">
             {recommendedNames.map((name, index) => (
               <div key={index} className="recommended-name">
                 {name}
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
         <div className="button-container">
           <Link to="/tagcloud">
