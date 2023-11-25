@@ -11,6 +11,8 @@ function TagCloud() {
   const [word, setWord] = useState(null);
   const [wordData, setWordData] = useState([]);
   const [likesCount, setLikesCount] = useState({});
+  const [isLikeButtonDisabled, setIsLikeButtonDisabled] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const fetchDataAndDrawChart = async () => {
@@ -19,15 +21,21 @@ function TagCloud() {
         const data = response.data;
         setWordData(data);
 
+        const likedWordsFromStorage = {};
+        Object.keys(localStorage).forEach((key) => {
+          if (key.startsWith("liked_")) {
+            const word = key.replace("liked_", "");
+            likedWordsFromStorage[word] = true;
+          }
+        });
+
+        setLikesCount(likedWordsFromStorage);
+
         const chartData = data.map((item) => ({
           x: item.word,
-          value: item.likes || 0, // 만약 likes가 undefined이면 0으로 설정
+          value: item.likes || 0,
         }));
 
-        // 확인을 위해 chartData를 출력
-        console.log("ChartData:", chartData);
-
-        // Dispose existing chart, if any
         if (window.wordCloudChart) {
           window.wordCloudChart.dispose();
         }
@@ -42,42 +50,64 @@ function TagCloud() {
           const likesData = likesResponse.data;
 
           setWord(word);
-          setLikesCount({ [word]: likesData.likes || 0 }); // 만약 likes가 undefined이면 0으로 설정
+          setLikesCount({ [word]: likesData.likes || 0 });
         });
 
-        // Draw the chart
         chart.draw();
 
-        // Store chart instance in window object
         window.wordCloudChart = chart;
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("데이터를 가져오는 중 오류 발생:", error);
       }
     };
 
     fetchDataAndDrawChart();
   }, []);
 
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   const toggleHeart = async () => {
     try {
-      console.log("Before toggle - likesCount:", likesCount);
-
       if (!word) {
-        console.error("No selected word.");
+        console.error("선택된 단어가 없습니다.");
         return;
       }
 
+      // Like 버튼 비활성화
+      setIsLikeButtonDisabled(true);
+
+      // API 호출 시간을 모방하기 위한 지연 시간
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      // 좋아요 개수를 무한히 증가
+      const newLikesCount = { ...likesCount, [word]: (likesCount[word] || 0) + 1 };
+      localStorage.setItem(`liked_${word}`, true);
+
+      // UI에서 좋아요 개수 업데이트
+      setLikesCount(newLikesCount);
+
+      // PATCH 요청을 실제로 서버에 전송
       const response = await axios.patch(`http://localhost:8000/api/wordcloud/${word}`);
 
       if (response.status === 200) {
-        const newLikesCount = { ...likesCount, [word]: (likesCount[word] || 0) + 1 };
-        setLikesCount(newLikesCount);
-        console.log("After toggle - likesCount:", newLikesCount);
+        console.log("좋아요가 성공적으로 적용되었습니다.");
       } else {
-        console.error("Failed to toggle heart:", response.status, response.statusText);
+        console.error("좋아요 적용 중 오류 발생:", response.status, response.statusText);
       }
+
+      // 좋아요 버튼 활성화 (잠시 후)
+      setTimeout(() => {
+        setIsLikeButtonDisabled(false);
+      }, 1000); // 필요한 경우 지연 시간을 조절하세요
     } catch (error) {
-      console.error("Error toggling heart:", error);
+      console.error("좋아요 증가 중 오류 발생:", error);
+      setIsLikeButtonDisabled(false);
     }
   };
 
@@ -104,8 +134,8 @@ function TagCloud() {
             <div className="modal-text">
               <p>{word}</p>
             </div>
-            <div className="modal-heart" onClick={toggleHeart}>
-              <img src={word in likesCount ? heartFill : heartNone} alt="하트" />
+            <div className="modal-heart" onClick={toggleHeart} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              <img src={isHovered || likesCount[word] ? heartFill : heartNone} alt="하트" />
             </div>
             <div className="modal-heart-text">
               <p>현재 좋아요 수 - </p>
