@@ -81,7 +81,7 @@
 | :-------------------------------------------: | :------------: |
 | <img width="200px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/315de42e-87be-4c71-ae12-01067f3820aa"> | <img width="200px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/eff39399-edd0-4469-aba2-2512b1a3c455"> |  
 | Random   |  About   |  
-| <img width="200px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/d681b46e-e681-4c08-ac6e-257718d0c661"> | <img width="200px" src="(https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/54e85d64-11fd-4142-adab-9af91a67c3df"> |
+| <img width="200px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/d681b46e-e681-4c08-ac6e-257718d0c661"> | <img width="200px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/54e85d64-11fd-4142-adab-9af91a67c3df"> |
 
 ---
 ## 핵심 기능 📦
