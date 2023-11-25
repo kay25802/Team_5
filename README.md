@@ -19,7 +19,7 @@
 **Designer(PM)**
 |      송지연       |                                                                                           
 | :------------------------------------------------------------------------------: |
-|   <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_1/assets/94633589/f7f60b7b-6a04-41e8-a38f-8cd619fd6e4a" > |
+|   <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/959f2111-0efe-4a0a-b568-8144cd9bb0cf" > |
 |   [@03.03.09](https://www.instagram.com/03.03.09/)   |
 | Sungshin.W.Univ  |
 
@@ -27,7 +27,7 @@
 
 |      김서윤       |          김아영         |                                                                                           
 | :------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: |
-|   <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_1/assets/94633589/f7f60b7b-6a04-41e8-a38f-8cd619fd6e4a" > |             <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_1/assets/94633589/f7f60b7b-6a04-41e8-a38f-8cd619fd6e4a" >    |
+|   <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/5902702f-8bae-4039-9309-ea7973f9e7d5" > |             <img width="160px" src="https://github.com/2023-AHEUNGTHON/Team_5/assets/110457233/e9fefa06-c214-459d-99fc-6abc89285b64" >    |
 |   [@2023-AHEUNGTHON](https://github.com/2023-AHEUNGTHON)   |    [@2023-AHEUNGTHON](https://github.com/2023-AHEUNGTHON)  |
 | Duksung.W.Univ | Myongji.Univ |
 
