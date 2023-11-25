@@ -9,6 +9,7 @@ const MakeNameRecommend = () => {
 
   const handleReplay = () => {
     setSelectedWord("");
+    window.location.reload();
   };
 
   const handleNextStep = () => {
