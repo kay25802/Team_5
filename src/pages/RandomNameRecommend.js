@@ -38,22 +38,11 @@ const RandomNameRecommend = ({ selectedCategory }) => {
           <div className="recommendation-block">
             {recommendedNames.map((item, index) => (
               <div key={index} className="recommended-name">
-                {/* Assuming each object has properties name1, name2, name3, name4, name5 */}
-                <p>{item.name1}</p>
-                <p>{item.name2}</p>
-                <p>{item.name3}</p>
-                <p>{item.name4}</p>
-                <p>{item.name5}</p>
+                {/* Assuming each object has a 'word' property */}
+                <p>{item.word}</p>
               </div>
             ))}
           </div>
-          {/* <div className="recommendation-block">
-            {recommendedNames.map((name, index) => (
-              <div key={index} className="recommended-name">
-                {name}
-              </div>
-            ))}
-          </div> */}
         </div>
         <div className="button-container">
           <Link to="/tagcloud">

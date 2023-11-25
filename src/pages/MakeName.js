@@ -41,7 +41,7 @@ const MakeName = ({ onNextStep }) => {
       setTimeout(() => {
         setShowRecommendation(true);
         // You can use the recommendations data here
-      }, 15000);
+      }, 8000);
     } catch (error) {
       console.error("Error fetching AI team name recommendations:", error);
       setIsLoading(false);
@@ -57,7 +57,7 @@ const MakeName = ({ onNextStep }) => {
       // 로딩이 끝나면 다음으로 버튼을 눌러준 것과 동일한 효과를 주기 위해
       setTimeout(() => {
         setIsLoading(false);
-      }, 15000);
+      }, 8000);
     }
   }, [isLoading]);
 

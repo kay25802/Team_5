@@ -16,10 +16,10 @@ const RandomName = () => {
   const handleNextStep = () => {
     if (selectedCategory) {
       setIsLoading(true); // 로딩 시작
-      // 15초 후에 다음 페이지로 이동
+      // 4초 후에 다음 페이지로 이동
       setTimeout(() => {
         navigate("/random/recommend", { state: { selectedCategory } });
-      }, 15000);
+      }, 4000);
     } else {
       // 카테고리를 선택해주세요 경고 등의 처리
     }
@@ -30,7 +30,7 @@ const RandomName = () => {
       // 로딩이 끝나면 다음으로 버튼을 눌러준 것과 동일한 효과를 주기 위해
       setTimeout(() => {
         setIsLoading(false);
-      }, 15000);
+      }, 4000);
     }
   }, [isLoading]);
 
