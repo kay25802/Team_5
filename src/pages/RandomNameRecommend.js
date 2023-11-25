@@ -51,7 +51,7 @@ const RandomNameRecommend = ({ selectedCategory }) => {
           </Link>
           <Link to="/random">
             <button className="get-recommendation-again-button">
-              <p>프로젝트 팀명으로</p>
+              <p>랜덤으로 팀명</p>
               <p>다시 추천받기</p>
             </button>
           </Link>
