@@ -45,6 +45,10 @@
   font-size: 1.2em;
 }
 
+.recommended-name p {
+  padding: 0 3vw;
+}
+
 .button-container {
   display: flex;
   justify-content: center;
