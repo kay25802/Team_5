@@ -11,9 +11,7 @@
 
 ## 배포 주소
 
-> **개발 버전** :  <br>
-> **프론트 서버** : <br>
-> **백엔드 서버** : <br>
+> **개발 버전** :  <br> https://teaming5.netlify.app/
 
 ## 팀 소개
 **Designer(PM)**
